@@ -1,6 +1,7 @@
 package net.java.employee_service.controller;
 
-import net.java.employee_service.EmployeeDto;
+import net.java.employee_service.dto.APIResponseDto;
+import net.java.employee_service.dto.EmployeeDto;
 import net.java.employee_service.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -21,8 +22,8 @@ public class EmployeeConstructor {
 
     // Build Get Employee REST API
     @GetMapping("{id}")
-    public ResponseEntity<EmployeeDto> getEmployee(@PathVariable("id") Long employeeId){
-        EmployeeDto apiResponseDto = employeeService.getEmployeeById(employeeId);
+    public ResponseEntity<APIResponseDto> getEmployee(@PathVariable("id") Long employeeId){
+        APIResponseDto apiResponseDto = employeeService.getEmployeeById(employeeId);
         return new ResponseEntity<>(apiResponseDto, HttpStatus.OK);
     }
 }

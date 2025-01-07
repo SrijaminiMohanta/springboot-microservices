@@ -1,6 +1,6 @@
 package net.java.employee_service.mapper;
 
-import net.java.employee_service.EmployeeDto;
+import net.java.employee_service.dto.EmployeeDto;
 import net.java.employee_service.entity.Employee;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
