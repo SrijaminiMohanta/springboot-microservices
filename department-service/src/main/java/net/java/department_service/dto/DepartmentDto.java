@@ -15,6 +15,9 @@ public class DepartmentDto {
     private String departmentDescription;
     private String departmentCode;
 
+    public DepartmentDto() {
+    }
+
     public DepartmentDto(Long id, String departmentName, String departmentDescription, String departmentCode) {
         this.id = id;
         this.departmentName = departmentName;
